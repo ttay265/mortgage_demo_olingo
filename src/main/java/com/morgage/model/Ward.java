@@ -3,18 +3,17 @@ package com.morgage.model;
 import javax.persistence.*;
 
 @Entity
-public class CategoryItem {
+public class Ward {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private int id;
-    @Column(name = "category_itemName")
-    private String categoryName;
+    @Column(name = "distric_name")
+    private String districName;
+    @Column(name = "address_number")
+    private String addressNumber;
     @Column(name = "description")
     private String description;
-
-    public CategoryItem() {
-    }
 
     public int getId() {
         return id;
@@ -24,12 +23,20 @@ public class CategoryItem {
         this.id = id;
     }
 
-    public String getCategoryName() {
-        return categoryName;
+    public String getDistricName() {
+        return districName;
     }
 
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
+    public void setDistricName(String districName) {
+        this.districName = districName;
+    }
+
+    public String getAddressNumber() {
+        return addressNumber;
+    }
+
+    public void setAddressNumber(String addressNumber) {
+        this.addressNumber = addressNumber;
     }
 
     public String getDescription() {
@@ -38,5 +45,8 @@ public class CategoryItem {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Ward() {
     }
 }
