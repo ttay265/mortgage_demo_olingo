@@ -4,14 +4,29 @@ import javax.persistence.*;
 
 @Entity
 public class Address {
-private int id;
-private String latitude;
-private String longtitude;
-private String fullAddress;
-private int status;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
+    private int id;
+    @Column(name = "latitude")
+    private String latitude;
+    @Column(name = "longtitude")
+    private String longtitude;
+    @Column(name = "full_address")
+    private String fullAddress;
+    @Column(name = "status")
+    private int status;
+    @Column(name = "ward_id")
+    private Integer wardId;
+
+    public Integer getWardId() {
+        return wardId;
+    }
+
+    public void setWardId(Integer wardId) {
+        this.wardId = wardId;
+    }
+
     public int getId() {
         return id;
     }
@@ -20,7 +35,7 @@ private int status;
         this.id = id;
     }
 
-    @Column(name="latitude")
+
     public String getLatitude() {
         return latitude;
     }
@@ -28,7 +43,7 @@ private int status;
     public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
-@Column(name = "longtitude")
+
     public String getLongtitude() {
         return longtitude;
     }
@@ -36,7 +51,7 @@ private int status;
     public void setLongtitude(String longtitude) {
         this.longtitude = longtitude;
     }
-@Column(name = "full_address")
+
     public String getFullAddress() {
         return fullAddress;
     }
@@ -44,7 +59,7 @@ private int status;
     public void setFullAddress(String fullAddress) {
         this.fullAddress = fullAddress;
     }
-    @Column(name = "status")
+
     public int getStatus() {
         return status;
     }

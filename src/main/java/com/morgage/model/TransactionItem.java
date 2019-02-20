@@ -18,6 +18,16 @@ public class TransactionItem {
     private String interestDayPeriod;
     @Column(name = "interest")
     private String interest;
+    @Column(name = "transaction_id")
+    private Integer transactionId;
+
+    public Integer getTransactionId() {
+        return transactionId;
+    }
+
+    public void setTransactionId(Integer transactionId) {
+        this.transactionId = transactionId;
+    }
 
     public int getId() {
         return id;

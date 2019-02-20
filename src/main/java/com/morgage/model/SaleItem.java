@@ -14,7 +14,25 @@ public class SaleItem implements Serializable {
     @Column(name = "price")
     private int price;
     @Column(name = "status")
-    private int status;
+    private Integer status;
+    @Column(name = "category_Id")
+    private Integer categoryId;
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public Integer getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
+    }
 
     public SaleItem() {
     }

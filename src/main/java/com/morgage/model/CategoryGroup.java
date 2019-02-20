@@ -9,8 +9,8 @@ public class CategoryGroup {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private int id;
-    @Column(name="category_groupName")
-    private String categoryGropName;
+    @Column(name="group_name")
+    private String categoryGroupName;
     @Column(name = "description")
     private String description;
 
@@ -22,12 +22,12 @@ public class CategoryGroup {
         this.id = id;
     }
 
-    public String getCategoryGropName() {
-        return categoryGropName;
+    public String getCategoryGroupName() {
+        return categoryGroupName;
     }
 
-    public void setCategoryGropName(String categoryGropName) {
-        this.categoryGropName = categoryGropName;
+    public void setCategoryGroupName(String categoryGroupName) {
+        this.categoryGroupName = categoryGroupName;
     }
 
     public String getDescription() {
