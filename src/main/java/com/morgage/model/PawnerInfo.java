@@ -9,13 +9,13 @@ public class PawnerInfo {
     @Column(name = "id", nullable = false)
     private int id;
     @Column(name = "name")
-    private  String name;
-    @Column(name = "phone")
-    private String phone;
+    private String name;
     @Column(name = "email")
     private String email;
     @Column(name = "phone_number")
     private String phoneNumber;
+    @Column(name = "transaction_id")
+    private Integer transactionId;
 
     public PawnerInfo() {
     }
@@ -36,12 +36,12 @@ public class PawnerInfo {
         this.name = name;
     }
 
-    public String getPhone() {
-        return phone;
+    public Integer getTransactionId() {
+        return transactionId;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setTransactionId(Integer transactionId) {
+        this.transactionId = transactionId;
     }
 
     public String getEmail() {

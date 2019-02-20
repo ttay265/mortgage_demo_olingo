@@ -9,7 +9,7 @@ import java.io.Serializable;
 public class Shop implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idshop")
+    @Column(name = "id")
     private Integer id;
     @Column(name = "shop_name")
     private String shopName;
@@ -25,6 +25,16 @@ public class Shop implements Serializable {
     private Integer rating;
     @Column(name = "policy")
     private Integer policy;
+    @Column(name = "account_id")
+    private Integer accountId;
+
+    public Integer getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(Integer accountId) {
+        this.accountId = accountId;
+    }
 
     public Integer getId() {
         return id;

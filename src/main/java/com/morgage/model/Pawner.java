@@ -14,6 +14,9 @@ public class Pawner {
     private String email;
     @Column(name = "phone_number")
     private String phoneNumber;
+    @Column(name = "account_id")
+    private Integer accountId;
+
 
     public int getId() {
         return id;
@@ -29,6 +32,14 @@ public class Pawner {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(Integer accountId) {
+        this.accountId = accountId;
     }
 
     public String getEmail() {
