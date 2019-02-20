@@ -1,4 +1,7 @@
 package com.morgage.repository;
 
-public interface PictureRepository {
+import com.morgage.model.Picture;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PictureRepository extends JpaRepository<Picture,Integer> {
 }
