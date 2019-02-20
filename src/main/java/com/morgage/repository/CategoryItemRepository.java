@@ -1,4 +1,7 @@
 package com.morgage.repository;
 
-public interface CategoryItemRepository {
+import com.morgage.model.CategoryItem;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CategoryItemRepository extends JpaRepository<CategoryItem, Integer> {
 }

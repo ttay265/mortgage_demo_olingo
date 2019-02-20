@@ -1,18 +1,15 @@
 package com.morgage.model;
+
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
-@Table(name = "pawner_info")
-//@Indexed
-public class PawnerInfo implements Serializable {
+public class PawnerInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Integer id;
-
+    @Column(name = "id", nullable = false)
+    private int id;
     @Column(name = "name")
-    private String name;
+    private  String name;
     @Column(name = "phone")
     private String phone;
     @Column(name = "email")
@@ -23,17 +20,13 @@ public class PawnerInfo implements Serializable {
     public PawnerInfo() {
     }
 
-    public PawnerInfo(String name, String phone, String email, String phoneNumber) {
-        this.name = name;
-        this.phone = phone;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-    }
-
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

@@ -1,47 +1,42 @@
-//package com.morgage.model;
-//
-//import javax.persistence.*;
-//import java.io.Serializable;
-//
-//@Entity
-//@Table(name = "district")
-////@Indexed
-//public class District implements Serializable {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "DistrictId")
-//    private Integer id;
-//    @Column(name = "DistrictName")
-//    private String districtName;
-//    @Column(name = "Description")
-//    private String description;
-//
-//    public District(String districtName, String description) {
-//        this.districtName = districtName;
-//        this.description = description;
-//    }
-//
-//    public District() {
-//    }
-//
-//    public Integer getId() {
-//        return id;
-//    }
-//
-//
-//    public String getDistrictName() {
-//        return districtName;
-//    }
-//
-//    public void setDistrictName(String districtName) {
-//        this.districtName = districtName;
-//    }
-//
-//    public String getDescription() {
-//        return description;
-//    }
-//
-//    public void setDescription(String description) {
-//        this.description = description;
-//    }
-//}
+package com.morgage.model;
+
+import javax.persistence.*;
+
+@Entity
+public class District {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private int id;
+    @Column(name = "DistrictName")
+    private String DistrictName;
+    @Column(name = "Description")
+    private String Description;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDistrictName() {
+        return DistrictName;
+    }
+
+    public void setDistrictName(String districtName) {
+        DistrictName = districtName;
+    }
+
+    public String getDescription() {
+        return Description;
+    }
+
+    public void setDescription(String description) {
+        Description = description;
+    }
+
+    public District() {
+    }
+}
