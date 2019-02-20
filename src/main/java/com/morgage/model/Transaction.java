@@ -17,6 +17,16 @@ public class Transaction {
     private Integer price;
     @Column(name = "status")
     private Integer status;
+    @Column(name = "pawner_id")
+    private Integer pawnerId;
+
+    public Integer getPawnerId() {
+        return pawnerId;
+    }
+
+    public void setPawnerId(Integer pawnerId) {
+        this.pawnerId = pawnerId;
+    }
 
     public int getId() {
         return id;

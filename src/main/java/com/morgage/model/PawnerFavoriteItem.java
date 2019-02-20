@@ -7,9 +7,29 @@ public class PawnerFavoriteItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private  int id;
+    private int id;
     @Column(name = "description")
     private String description;
+    @Column(name = "pawner_id")
+    private Integer pawnerId;
+    @Column(name = "item_id")
+    private Integer itemId;
+
+    public Integer getPawnerId() {
+        return pawnerId;
+    }
+
+    public void setPawnerId(Integer pawnerId) {
+        this.pawnerId = pawnerId;
+    }
+
+    public Integer getItemId() {
+        return itemId;
+    }
+
+    public void setItemId(Integer itemId) {
+        this.itemId = itemId;
+    }
 
     public int getId() {
         return id;

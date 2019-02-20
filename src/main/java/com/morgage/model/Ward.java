@@ -8,12 +8,28 @@ public class Ward {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private int id;
-    @Column(name = "distric_name")
-    private String districName;
-    @Column(name = "address_number")
-    private String addressNumber;
+    @Column(name = "ward_name")
+    private String wardName;
     @Column(name = "description")
     private String description;
+    @Column(name = "district_id")
+    private Integer districtId;
+
+    public String getWardName() {
+        return wardName;
+    }
+
+    public void setWardName(String wardName) {
+        this.wardName = wardName;
+    }
+
+    public Integer getDistrictId() {
+        return districtId;
+    }
+
+    public void setDistrictId(Integer districtId) {
+        this.districtId = districtId;
+    }
 
     public int getId() {
         return id;
@@ -23,21 +39,6 @@ public class Ward {
         this.id = id;
     }
 
-    public String getDistricName() {
-        return districName;
-    }
-
-    public void setDistricName(String districName) {
-        this.districName = districName;
-    }
-
-    public String getAddressNumber() {
-        return addressNumber;
-    }
-
-    public void setAddressNumber(String addressNumber) {
-        this.addressNumber = addressNumber;
-    }
 
     public String getDescription() {
         return description;
