@@ -13,11 +13,13 @@ public class AddressService {
         this.addressRepository = addressRepository;
     }
 
-    public void addAddressToShopData(int id, ShopData shopData) {
+    public ShopData addAddressToShopData(int id, ShopData shopData) {
         Address address = addressRepository.findAddressById(id);
         shopData.setFullAddress(address.getFullAddress());
         shopData.setLatitude(address.getLatitude());
         shopData.setLongtitude(address.getLongtitude());
+
+        return shopData;
 
     }
 }

@@ -121,4 +121,21 @@ public class ShopData implements Serializable {
     public void setListCate(Map<CategoryGroup, List<CategoryItem>> listCate) {
         this.listCate = listCate;
     }
+
+    @Override
+    public String toString() {
+        return "ShopData{" +
+                "shopName='" + shopName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", facebook='" + facebook + '\'' +
+                ", email='" + email + '\'' +
+                ", status=" + status +
+                ", rating=" + rating +
+                ", policy=" + policy +
+                ", latitude='" + latitude + '\'' +
+                ", longtitude='" + longtitude + '\'' +
+                ", fullAddress='" + fullAddress + '\'' +
+                ", listCate=" + listCate +
+                '}';
+    }
 }

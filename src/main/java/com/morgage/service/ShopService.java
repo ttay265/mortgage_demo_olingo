@@ -16,7 +16,16 @@ public class ShopService {
 
     //Search shop by shop name.
     public List<Shop> searchByShopName(String name) {
-        List<Shop> listShop = (List<Shop>) shopRepository.searchShopByName(name);
+        System.out.println(name);
+        List<Shop> listShop = shopRepository.searchShopByName(name);
+
+
+        return listShop;
+    }
+
+    //findall
+    public List<Shop> findAll() {
+        List<Shop> listShop = shopRepository.findAll();
 
         return listShop;
     }

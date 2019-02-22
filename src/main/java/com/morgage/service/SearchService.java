@@ -12,7 +12,7 @@ public class SearchService {
 
 
     //Add Shop to Shop Data.
-    public void addShopToShopData(Shop shop, ShopData shopData) {
+    public ShopData addShopToShopData(Shop shop, ShopData shopData) {
         shopData.setShopName(shop.getShopName());
         shopData.setEmail(shop.getEmail());
         shopData.setFacebook(shop.getFacebook());
@@ -20,6 +20,8 @@ public class SearchService {
         shopData.setPolicy(shop.getPolicy());
         shopData.setRating(shop.getRating());
         shopData.setStatus(shop.getStatus());
+
+        return shopData;
     }
 
 

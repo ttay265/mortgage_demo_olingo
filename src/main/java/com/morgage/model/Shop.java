@@ -27,6 +27,16 @@ public class Shop implements Serializable {
     private Integer policy;
     @Column(name = "account_id")
     private Integer accountId;
+    @Column(name = "address_id")
+    private Integer addressId;
+
+    public Integer getAddressId() {
+        return addressId;
+    }
+
+    public void setAddressId(Integer addressId) {
+        this.addressId = addressId;
+    }
 
     public Integer getAccountId() {
         return accountId;

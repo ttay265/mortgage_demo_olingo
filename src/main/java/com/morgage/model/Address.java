@@ -19,6 +19,7 @@ public class Address {
     @Column(name = "ward_id")
     private Integer wardId;
 
+
     public Integer getWardId() {
         return wardId;
     }

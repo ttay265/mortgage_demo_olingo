@@ -25,24 +25,24 @@ public class SearchController {
         this.shopService = shopService;
         this.addressService = addressService;
     }
-
-    @RequestMapping(value = "/tu-khoa")
+    // search shops by keyword ( shopname)
+    @RequestMapping("/tim/ten")
     @ResponseBody
-    public List<ShopData> searchResult(@RequestParam("tu-khoa") String searchValue) {
+    public List<ShopData> searchResult(@RequestParam("keyword") String searchValue) {
         List<ShopData> listData;
+        System.out.println("here");
+        System.out.println(searchValue);
         List<Shop> listShop = shopService.searchByShopName(searchValue);
         if (listShop != null) {
             listData = new ArrayList<>();
-            for (int i = 0; i <= listShop.size(); i++) {
+            for (int i = 0; i < listShop.size(); i++) {
                 ShopData shopData = new ShopData();
                 // fill shop to shop data.
-                searchService.addShopToShopData(listShop.get(i), shopData);
+                shopData = searchService.addShopToShopData(listShop.get(i), shopData);
                 // fill address to shop data.
-                addressService.addAddressToShopData(listShop.get(i).get, shopData);
+                shopData = addressService.addAddressToShopData(listShop.get(i).getAddressId(), shopData);
+
                 listData.add(shopData);
-
-
-
             }
 
             return listData;
@@ -51,4 +51,15 @@ public class SearchController {
 
         return null;
     }
+    //test
+    @RequestMapping("/findall")
+    @ResponseBody
+    public List<Shop> findall() {
+        List<Shop> list = shopService.findAll();
+        return list;
+    }
+    //Search shop by category ( category, location, ban kinh)
+//    @RequestMapping("/tim/cate")
+//    @ResponseBody
+
 }
